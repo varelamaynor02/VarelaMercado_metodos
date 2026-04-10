@@ -13,12 +13,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $surnamletters = strlen($apellido);
     $mayusName = strtoupper($nombre);
     $invertirEdad = strrev($edad);
+    $revoltijo = str_shuffle($nombre . $apellido);
+    $ncompleto = ucwords(strtolower($nombre . " " . $apellido));
 
     echo "<h2>Datos Recibidos:</h2>";
     echo "<p>Nombre: " .$nombre . " - tiene " . $nameletters . " letras.</p>";
     echo "<p>Apellido: " .$apellido . " - tiene " . $surnamletters . " letras.</p>";
     echo "<p>Edad: " .$edad . " - edad invertida: " . $invertirEdad . "</p>";
     echo "<p>Nombre en mayúsculas: " .$mayusName . "</p>";
+    echo "<p>Revoltillo: " .$revoltijo . "</p>";
+    echo "<p>Nombre Completo: " .$ncompleto . "</p>";
 } else {
     echo "<p>Por favor, envíe el formulario.</p>";
 }
