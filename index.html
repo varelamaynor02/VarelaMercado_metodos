@@ -10,27 +10,27 @@
 </head>
 
 <body>
-    <form action="recepcion.php" method="POST">
-        <fieldset>
+    <form action="recepcion.php" method="POST" target="_blank">
+        <fieldset class="border p-4 m-4">
             <legend>Formulario Post</legend>
             <div class="container">
                 <div class="row" id="row-nombre">
                     <div class="col">
                         <input type="text" name="nombre" class="form-control" placeholder="Nombre"
-                            aria-label="First name">
+                            aria-label="First name" required>
                     </div>
                 </div><br>
 
                 <div class="row" id="row-apellido">
                     <div class="col">
                         <input type="text" name="apellido" class="form-control" placeholder="Apellido"
-                            aria-label="Last name">
+                            aria-label="Last name" required>
                     </div>
                 </div><br>
 
                 <div class="row" id="row-edad">
                     <div class="col">
-                        <input type="number" name="edad" class="form-control" placeholder="Edad" aria-label="Age">
+                        <input type="number" name="edad" class="form-control" placeholder="Edad" aria-label="Age" required>
                     </div>
                 </div>
                 <br>
