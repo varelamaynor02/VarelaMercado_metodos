@@ -7,6 +7,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($nombre) || empty($apellido) || empty($edad)){
         echo "<p>Por favor, complete todos los campos.</p>";
         exit;
+    }else if ($edad <= 0){
+        echo "<p>Por favor, ingrese una edad válida.</p>";
+        exit;
     }
 
     $nameletters = strlen($nombre);
